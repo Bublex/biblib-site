@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title == site.title %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <style>
+    /* Plateforme de marque, piste Lavande (comme les réglages de l'extension). */
+    @font-face { font-family: "Biblib Fredoka"; font-weight: 700; font-display: swap; src: url({{ '/fredoka-700.woff2' | relative_url }}) format('woff2'); }
+    :root { --bg: #f1e9fc; --surface: #fff; --fg: #2a1a4a; --muted: #5f5478; --line: #e2d6f3; --accent: #6d28d9; color-scheme: light; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #150d26; --surface: #1c1230; --fg: #f1e9fc; --muted: #b9add3; --line: #3a2c5c; --accent: #c4a6fa; color-scheme: dark; } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+    header { padding-top: 24px; }
+    .logo { font: 700 34px/1 "Biblib Fredoka", system-ui, sans-serif; text-decoration: none; color: #7b3fe4; }
+    .logo span { color: #a3e635; -webkit-text-stroke: 1px #6d28d9; }
+    main { background: var(--surface); border: 2px solid var(--line); border-radius: 20px; padding: 8px 28px 24px; margin-top: 18px; }
+    h1, h2 { font-family: "Biblib Fredoka", system-ui, sans-serif; line-height: 1.2; }
+    a { color: var(--accent); }
+    code { font: 14px ui-monospace, Menlo, Consolas, monospace; background: var(--bg); border-radius: 4px; padding: 1px 4px; overflow-wrap: anywhere; }
+    table { border-collapse: collapse; width: 100%; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+    img { max-width: 100%; height: auto; }
+    footer { color: var(--muted); font-size: 14px; padding: 18px 20px 40px; }
+  </style>
+</head>
+<body>
+  <header><a class="logo" href="{{ '/' | relative_url }}">Bib<span>lib</span></a></header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <a href="{{ '/confidentialite' | relative_url }}">Confidentialité</a> · <a href="{{ '/telephone' | relative_url }}">Sur téléphone</a> · <a href="https://github.com/Bublex/biblib-site/issues">Assistance</a>
+  </footer>
+</body>
+</html>
