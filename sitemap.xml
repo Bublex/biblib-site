@@ -1,0 +1,13 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ '/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/aide/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/bibliotheques/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/fonctionnement/iphone/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/fonctionnement/chrome/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/confidentialite' | absolute_url }}</loc></url>
+  <url><loc>{{ '/telephone' | absolute_url }}</loc></url>
+</urlset>

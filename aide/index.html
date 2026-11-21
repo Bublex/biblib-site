@@ -1,0 +1,64 @@
+---
+layout: site
+title: Aide
+permalink: /aide/
+nav: aide
+description: Configure Biblib sur ton appareil et résous les problèmes de recherche ou de réservation.
+---
+<div class="bb-tint">
+  <div class="bb-wrap bb-section bb-intro">
+    <h1>Aide</h1>
+    <p>Configure Biblib sur ton appareil ou <a class="bb-link" href="#depannage">résous un problème</a>.</p>
+  </div>
+</div>
+
+<section class="bb-wrap bb-section bb-stack" aria-labelledby="demarrer">
+  <h2 id="demarrer">Démarrer</h2>
+  <div class="bb-platforms">
+    <article class="bb-platform">
+      <h3>Application Biblib sur iPhone</h3>
+      <p>Scanne un code-barres ou partage la fiche d’une œuvre depuis Safari.</p>
+      <a class="bb-link" href="{{ '/fonctionnement/iphone/' | relative_url }}">Voir le guide de l’application iPhone</a>
+    </article>
+    <article class="bb-platform">
+      <h3>Extension Biblib pour Chrome</h3>
+      <p>Vérifie la disponibilité d’une œuvre depuis sa fiche sur un site compatible.</p>
+      <a class="bb-link" href="{{ '/fonctionnement/chrome/' | relative_url }}">Voir le guide de l’extension Chrome</a>
+    </article>
+    <article class="bb-platform">
+      <h3>Raccourci sur Android ou iPhone</h3>
+      <p>Vérifie que ton catalogue fournit une adresse de recherche directe par ISBN. Copie cette adresse depuis les réglages de l’extension Chrome.</p>
+      <p>Sur iPhone, utilise l’app Raccourcis. Sur Android, installe Binary Eye pour scanner le code-barres et ouvrir le catalogue.</p>
+      <a class="bb-link" href="{{ '/telephone' | relative_url }}">Configurer le raccourci sur Android ou iPhone</a>
+    </article>
+  </div>
+</section>
+
+<section id="depannage" class="bb-wrap bb-section bb-stack" aria-labelledby="titre-depannage">
+  <h2 id="titre-depannage">Dépannage</h2>
+  <div class="bb-faq">
+    <details>
+      <summary>Mon scan ne donne aucun résultat. Que faire&nbsp;?</summary>
+      <p>Recherche le titre dans le catalogue de ta bibliothèque. Sur iPhone, tu peux aussi saisir le titre dans Biblib. Une autre édition peut avoir un ISBN différent.</p>
+    </details>
+    <details>
+      <summary>Ma bibliothèque manque dans Biblib. Que faire&nbsp;?</summary>
+      <p>Cherche ta ville ou ton réseau dans l’annuaire. Si ta bibliothèque manque, indique son nom et l’adresse de son catalogue dans une demande sur GitHub.</p>
+      <p><a href="{{ '/bibliotheques/' | relative_url }}#recherche">Rechercher ma bibliothèque dans l’annuaire</a></p>
+    </details>
+    <details>
+      <summary>Je ne parviens pas à réserver. Que faire&nbsp;?</summary>
+      <p>Ouvre la notice depuis Biblib. Connecte-toi avec ton compte lecteur sur le site de ta bibliothèque. Si la réservation reste indisponible, contacte ta bibliothèque.</p>
+    </details>
+  </div>
+</section>
+
+<div class="bb-tint">
+  <section class="bb-wrap bb-section bb-support" aria-labelledby="titre-assistance">
+    <div>
+      <h2 id="titre-assistance">Assistance</h2>
+      <p class="bb-muted">Décris ton problème ou propose une bibliothèque sur GitHub.</p>
+    </div>
+    <a class="bb-button bb-primary" href="https://github.com/Bublex/biblib-site/issues">Assistance sur GitHub</a>
+  </section>
+</div>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title == site.title %}Biblib{% else %}{{ page.title | escape }} · Biblib{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:image" content="{{ '/assets/chrome.jpg' | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/biblib.png' | relative_url }}" type="image/png">
+  <link rel="stylesheet" href="{{ '/assets/biblib.css' | relative_url }}">
+</head>
+<body id="biblib-maquette" data-current-page="{{ page.nav }}">
+  <a class="bb-skip" href="#contenu">Aller au contenu</a>
+  <header class="bb-header">
+    <div class="bb-wrap bb-bar">
+      <a class="bb-brand" href="{{ '/' | relative_url }}" aria-label="Biblib, accueil"><img src="{{ '/assets/biblib.png' | relative_url }}" width="32" height="32" alt="">Biblib</a>
+      <nav class="bb-nav" aria-label="Navigation principale">
+        <a data-page-link="accueil" href="{{ '/' | relative_url }}"{% if page.nav == 'accueil' %} aria-current="page"{% endif %}>Accueil</a>
+        <a href="{{ '/fonctionnement/iphone/' | relative_url }}"{% if page.nav == 'fonctionnement' %} aria-current="true"{% endif %}>Comment ça marche</a>
+        <a href="{{ '/bibliotheques/' | relative_url }}"{% if page.nav == 'bibliotheques' %} aria-current="page"{% endif %}>Bibliothèques</a>
+        <a href="{{ '/aide/' | relative_url }}"{% if page.nav == 'aide' %} aria-current="page"{% endif %}>Aide</a>
+      </nav>
+      <a class="bb-button bb-primary" href="https://apps.apple.com/fr/app/biblib-dispo-en-biblioth%C3%A8que/id6828761341">Télécharger sur iPhone</a>
+    </div>
+  </header>
+  <main id="contenu">
+    {{ content }}
+  </main>
+  <footer class="bb-wrap bb-foot">
+    <a class="bb-brand" href="{{ '/' | relative_url }}">Biblib</a>
+    <ul aria-label="Liens utiles">
+      <li><a href="{{ '/confidentialite' | relative_url }}">Confidentialité</a></li>
+      <li><a href="{{ '/telephone' | relative_url }}">Raccourci téléphone</a></li>
+      <li><a href="https://github.com/Bublex/biblib-site/issues">Assistance sur GitHub</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

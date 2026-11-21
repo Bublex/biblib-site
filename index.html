@@ -1,0 +1,57 @@
+---
+layout: site
+title: "Biblib"
+description: "Vérifie si l’œuvre que tu as repérée est disponible dans tes bibliothèques. Biblib existe sur iPhone et dans Chrome."
+nav: accueil
+permalink: /
+---
+<div class="bb-hero">
+        <div class="bb-wrap bb-hero-layout">
+          <div class="bb-stack">
+            <h1 id="biblib-titre-accueil">Et si la bibli <span class="bb-highlight">l’avait déjà&nbsp;?</span></h1>
+            <p class="bb-hero-copy">Biblib vérifie si l’œuvre que tu as repérée est disponible dans tes bibliothèques.</p>
+            <div class="bb-actions">
+              <a class="bb-button bb-primary" href="https://apps.apple.com/fr/app/biblib-dispo-en-biblioth%C3%A8que/id6828761341">Télécharger sur iPhone</a>
+              <a class="bb-button bb-secondary" href="{{ '/fonctionnement/chrome/' | relative_url }}">Découvrir l’extension Chrome</a>
+            </div>
+            <p class="bb-muted bb-small bb-hero-note">Tes réglages restent sur ton appareil.</p>
+          </div>
+          <figure>
+            <div class="bb-browser">
+              <img src="{{ '/assets/chrome.jpg' | relative_url }}" width="840" height="525" alt="Sur la fiche de La Horde du Contrevent, Biblib indique un exemplaire disponible à la médiathèque du Burck.">
+            </div>
+            <figcaption>Exemple de résultat dans l’extension Chrome</figcaption>
+          </figure>
+        </div>
+      </div>
+      <ul class="bb-wrap bb-formats" aria-label="Supports pris en charge">
+        <li>Livres et BD</li>
+        <li>Films et séries</li>
+        <li>Musique</li>
+        <li>Jeux de société</li>
+        <li>Jeux vidéo</li>
+      </ul>
+      <div class="bb-wrap bb-section bb-check">
+        <div>
+          <h2>Ta bibliothèque est-elle compatible&nbsp;?</h2>
+          <p class="bb-muted">Cherche ta ville ou le nom de ton réseau.</p>
+        </div>
+        <form action="{{ '/bibliotheques/' | relative_url }}#recherche" method="get" role="search">
+          <label for="biblib-recherche-accueil">Ville ou réseau</label>
+          <div class="bb-field">
+            <input id="biblib-recherche-accueil" type="search" name="ville" placeholder="Ex. Bordeaux" autocomplete="off">
+            <button class="bb-button bb-primary" type="submit">Rechercher</button>
+          </div>
+        </form>
+      </div>
+      <div class="bb-tint">
+        <div class="bb-wrap bb-section">
+          <h2>De la découverte au prêt</h2>
+          <ul class="bb-steps">
+            <li><h3>Choisis tes bibliothèques</h3><p>Ajoute les bibliothèques que tu fréquentes dans les réglages.</p></li>
+            <li><h3>Vérifie une œuvre</h3><p>Scanne son code-barres sur iPhone ou ouvre sa fiche dans Chrome.</p></li>
+            <li><h3>Trouve où l’emprunter</h3><p>Repère les exemplaires disponibles. Ouvre la notice pour réserver auprès de ta bibliothèque.</p></li>
+          </ul>
+          <a class="bb-link" href="{{ '/fonctionnement/iphone/' | relative_url }}">Voir comment ça marche </a>
+        </div>
+      </div>
