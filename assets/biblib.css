@@ -150,7 +150,6 @@
   #biblib-maquette .bb-faq details { border-bottom: 1px solid var(--line); }
   #biblib-maquette .bb-faq summary { padding: 14px 2px; min-height: 44px; font-weight: 700; }
   #biblib-maquette .bb-faq p { max-width: 65ch; padding: 0 2px 15px; color: var(--muted); }
-  #biblib-maquette .bb-faq p a { display: inline-block; padding-block: 9px; }
   #biblib-maquette .bb-support { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
   #biblib-maquette .bb-support p { margin-top: 8px; }
   #biblib-maquette .bb-private { max-width: 66ch; }

@@ -75,7 +75,7 @@ Biblib n'est affilié à aucune bibliothèque ni à aucun des sites cités.
 
 ## Contact
 
-Pour toute question : [ouvre un ticket sur GitHub](https://github.com/Bublex/biblib-site/issues).
+Pour toute question, écris à [felix-biblib@posteo.net](mailto:felix-biblib@posteo.net). Tu peux aussi [ouvrir un ticket sur GitHub](https://github.com/Bublex/biblib-site/issues).
 
 ---
 
@@ -84,3 +84,5 @@ Pour toute question : [ouvre un ticket sur GitHub](https://github.com/Bublex/bib
 Biblib collects no personal data: no account, no server, no analytics. Settings are stored locally (`chrome.storage.local`, not synced). On supported book, music, film and board game sites, the extension reads the ISBN (or EAN for a CD, DVD or board game), title and author of the displayed item and sends them only to the public catalogs of the libraries the user selected, directly from the browser, to check availability. Unless the user turns off Médiathèque Numérique (on by default), film or series titles (and original titles if needed) are also sent to its public API without authentication or cookies. A catalogue match does not confirm that the user's library subscribes or that the user's account has remaining credits. Nothing is sent to the developer, sold, or shared for any other purpose. The optional "Autour de moi" (near me) button asks the browser or phone for the user's location, compares it on the device with the towns served by each supported library network to list the nearest ones, and discards it: the location is never sent or stored.
 
 The iPhone app uses the camera only to read a book's barcode on the device; images are neither stored nor sent. The scanned ISBN or EAN is sent to the selected library catalogs and, to identify the item, to the French National Library catalog (catalogue.bnf.fr). To get the title and cover, the barcode is also sent to leslibraires.fr (a network of independent bookshops), then if needed to Google Books and Open Library (books) or MusicBrainz and Cover Art Archive (CDs), once per item, with nothing else. A link pasted into the search field is fetched from the phone, like a shared page. Settings, favorites, bookmarks, the list of scanned books and library cards (number, holder, expiry date, entered by the user to show the card's barcode at the checkout kiosk) are stored on the phone only and never sent; the card renewal reminder is a local notification scheduled by the phone; bookmarked items are re-checked against the selected catalogs when the app is opened.
+
+Contact: [felix-biblib@posteo.net](mailto:felix-biblib@posteo.net).
