@@ -12,7 +12,7 @@ permalink: /
             <p class="bb-hero-copy">Biblib vérifie si l’œuvre que tu as repérée est disponible dans tes bibliothèques.</p>
             <div class="bb-actions">
               <a class="bb-button bb-primary" href="https://apps.apple.com/fr/app/biblib-dispo-en-biblioth%C3%A8que/id6828761341">Télécharger sur iPhone</a>
-              <a class="bb-button bb-secondary" href="{{ '/fonctionnement/chrome/' | relative_url }}">Découvrir l’extension Chrome</a>
+              <a class="bb-button bb-secondary" href="https://chromewebstore.google.com/detail/biblib-ce-livre-est-il-da/bigjgcfejleibpibbmmnpoagdckoacmn">Ajouter à Chrome</a>
             </div>
             <p class="bb-muted bb-small bb-hero-note">Tes réglages restent sur ton appareil.</p>
           </div>
@@ -34,10 +34,10 @@ permalink: /
       <div class="bb-wrap bb-section bb-check">
         <div>
           <h2>Ta bibliothèque est-elle compatible&nbsp;?</h2>
-          <p class="bb-muted">Cherche ta ville ou le nom de ton réseau.</p>
+          <p class="bb-muted">Cherche ta ville, ton code postal ou le nom de ton réseau.</p>
         </div>
         <form action="{{ '/bibliotheques/' | relative_url }}#recherche" method="get" role="search">
-          <label for="biblib-recherche-accueil">Ville ou réseau</label>
+          <label for="biblib-recherche-accueil">Ville, code postal ou réseau</label>
           <div class="bb-field">
             <input id="biblib-recherche-accueil" type="search" name="ville" placeholder="Ex. Bordeaux" autocomplete="off">
             <button class="bb-button bb-primary" type="submit">Rechercher</button>

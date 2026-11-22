@@ -7,4 +7,6 @@ GitHub Pages publie la branche `main` à l’adresse <https://bublex.github.io/b
 - L’annuaire reprend les réseaux du projet Biblib. La page contient la liste des réseaux. Le script filtre la liste dans le navigateur.
 - Les questions et signalements passent par [l’assistance sur GitHub](https://github.com/Bublex/biblib-site/issues).
 
-Le générateur `tools/site.mjs` du projet Biblib génère des fichiers de l’ancien site. Compare ses sorties avant de reprendre un document dans ce dépôt. Les fichiers `_layouts/default.html` et `index.md` de ce générateur peuvent remplacer le gabarit ou l’accueil actuel.
+Le générateur `tools/site.mjs` du projet Biblib écrit seulement `confidentialite.md` et `telephone.md`, à partir de `PRIVACY.md` et `docs/telephone.md`. Modifie ces deux pages dans le projet Biblib, puis lance le générateur. Les autres fichiers appartiennent à ce dépôt.
+
+Les codes postaux de l’annuaire viennent des établissements du projet Biblib (`extension/lib/establishments-data.js`).
