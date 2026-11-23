@@ -1,38 +1,9 @@
 ---
 layout: site
-title: "Comment ça marche · Sur Chrome"
-description: "Vérifie la disponibilité d’une œuvre dans tes bibliothèques avec Biblib."
+title: "Comment ça marche · Dans Chrome"
+description: "Biblib cherche une œuvre dans le catalogue de tes bibliothèques. Ouvre sa fiche sur Amazon, la Fnac ou Babelio : la pastille Biblib te répond."
 nav: fonctionnement
+appareil: chrome
 permalink: /fonctionnement/chrome/
 ---
-<div class="bb-tint"><div class="bb-wrap bb-section bb-intro">
-        <h1 id="biblib-titre-fonctionnement">Comment ça marche</h1>
-        <p>Retrouve une œuvre dans tes bibliothèques depuis ton iPhone ou dans Chrome.</p>
-      </div></div>
-      <div class="bb-wrap bb-section"><nav class="bb-actions bb-guide-nav" aria-label="Guides par appareil"><a class="bb-button bb-secondary" href="{{ '/fonctionnement/iphone/' | relative_url }}">Sur iPhone</a><a class="bb-button bb-secondary" aria-current="page" href="{{ '/fonctionnement/chrome/' | relative_url }}">Sur Chrome</a></nav><div class="bb-demo">
-          <div class="bb-stack">
-            <h2>Vérifie depuis la fiche</h2>
-            <ol class="bb-numbered">
-              <li>Choisis tes bibliothèques dans l’extension.</li>
-              <li>Ouvre la fiche d’une œuvre sur un site compatible, comme Babelio ou SensCritique.</li>
-              <li>Clique sur la pastille Biblib pour voir les exemplaires et ouvrir la notice.</li>
-            </ol>
-            <div class="bb-actions"><a class="bb-button bb-primary" href="https://chromewebstore.google.com/detail/biblib-ce-livre-est-il-da/bigjgcfejleibpibbmmnpoagdckoacmn">Ajouter à Chrome</a><a class="bb-link" href="{{ '/bibliotheques/' | relative_url }}#recherche">Voir les bibliothèques compatibles</a></div>
-          </div>
-          <figure>
-            <div class="bb-browser"><img src="{{ '/assets/chrome.jpg' | relative_url }}" width="840" height="525" alt="Le panneau de l’extension indique les bibliothèques où La Horde du Contrevent est disponible."></div>
-            <figcaption>Exemple de résultat sur une fiche de livre</figcaption>
-          </figure>
-        </div>
-      </div><div class="bb-tint"><div class="bb-wrap bb-section bb-demo">
-        <div class="bb-stack">
-          <h2>Comprends les résultats</h2>
-          <div class="bb-status-item"><h3>Disponible</h3><p>Regarde dans quelle bibliothèque se trouve l’exemplaire.</p></div>
-          <div class="bb-status-item"><h3>Emprunté</h3><p>Consulte la date de retour si le catalogue l’indique. Ouvre ensuite la notice pour réserver.</p></div>
-          <div class="bb-status-item"><h3>Disponibilité à vérifier</h3><p>Ouvre la notice pour vérifier l’état de l’exemplaire auprès de ta bibliothèque.</p></div>
-        </div>
-        <figure>
-          <div class="bb-phone bb-phone-result"><img src="{{ '/assets/resultat.jpg' | relative_url }}" width="374" height="810" alt="Sur iPhone, Biblib indique que le livre La Femme de ménage est emprunté et affiche un bouton Réserver."></div>
-          <figcaption>Exemple d’un livre emprunté</figcaption>
-        </figure>
-      </div></div>
+{% include fonctionnement.html %}

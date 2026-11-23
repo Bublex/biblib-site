@@ -1,0 +1,133 @@
+{% comment %}
+  Page «&nbsp;Comment ça marche&nbsp;», commune à /fonctionnement/iphone/ et /fonctionnement/chrome/.
+  `page.appareil` choisit le guide affiché au chargement. Le sélecteur change de guide sans recharger la page
+  (assets/fonctionnement.js). Sans JavaScript, chaque bouton du sélecteur reste un lien vers l'autre page.
+{% endcomment %}
+{% assign chrome = false %}{% if page.appareil == 'chrome' %}{% assign chrome = true %}{% endif %}
+<div class="bb-tint"><div class="bb-wrap bb-section bb-intro">
+  <h1 id="biblib-titre-fonctionnement">Comment ça marche</h1>
+  <p class="bb-how-lead">Biblib cherche une œuvre dans le catalogue de tes bibliothèques. En quelques secondes, tu sais si tu peux l’emprunter au lieu de l’acheter.</p>
+  <nav class="bb-switch" aria-label="Choisis ton appareil">
+    <a data-appareil="iphone" href="{{ '/fonctionnement/iphone/' | relative_url }}"{% unless chrome %} aria-current="page"{% endunless %}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="2" /><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>Sur iPhone</a>
+    <a data-appareil="chrome" href="{{ '/fonctionnement/chrome/' | relative_url }}"{% if chrome %} aria-current="page"{% endif %}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2" /><path d="M1.5 20.5h21" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>Dans Chrome</a>
+  </nav>
+</div></div>
+
+<section class="bb-wrap bb-section" data-panneau="iphone" aria-labelledby="titre-etapes-iphone"{% if chrome %} hidden{% endif %}>
+  <div class="bb-demo">
+    <div class="bb-stack">
+      <h2 id="titre-etapes-iphone">Sur iPhone, en 3 étapes</h2>
+      <ol class="bb-big-steps">
+        <li><span class="bb-step-num" aria-hidden="true">1</span><div><h3>Choisis tes bibliothèques</h3><p>Dans les réglages, ajoute les bibliothèques où tu vas. «&nbsp;Autour de moi&nbsp;» trouve celles près de chez toi.</p></div></li>
+        <li><span class="bb-step-num" aria-hidden="true">2</span><div><h3>Scanne le code-barres</h3><p>Vise le code-barres d’un livre, d’un film ou d’un jeu. Tu peux aussi taper son titre.</p></div></li>
+        <li><span class="bb-step-num" aria-hidden="true">3</span><div><h3>Réserve-le à ta bibli</h3><p>Biblib te dit où l’œuvre est disponible. Touche «&nbsp;Réserver&nbsp;» pour ouvrir sa page dans le catalogue de ta bibliothèque.</p></div></li>
+      </ol>
+      <div class="bb-actions"><a class="bb-button bb-primary" href="https://apps.apple.com/fr/app/biblib-dispo-en-biblioth%C3%A8que/id6828761341">Télécharger sur iPhone</a><span class="bb-muted bb-small">Gratuit, sans compte, sans pub.</span></div>
+    </div>
+    <figure>
+      <div class="bb-phone"><img src="{{ '/assets/scan.jpg' | relative_url }}" width="374" height="810" alt="Après avoir scanné un code-barres sur iPhone, Biblib indique que Mortelle Adèle, tome 1, est disponible dans ta bibliothèque."></div>
+      <figcaption>Un scan dans l’app iPhone</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="bb-wrap bb-section bb-more" data-panneau="iphone" aria-labelledby="titre-sans-scanner"{% if chrome %} hidden{% endif %}>
+  <h2 id="titre-sans-scanner">Pas besoin d’avoir l’œuvre en main</h2>
+  <p class="bb-lead">Vérifie aussi une œuvre vue sur un site marchand. Ou ouvre le scanner en un geste.</p>
+  <div class="bb-features">
+    <article class="bb-feature" aria-labelledby="titre-partage">
+      <div class="bb-stack">
+        <p class="bb-kicker">Depuis un site marchand</p>
+        <h3 id="titre-partage">Tu la vois sur Amazon ou la Fnac&nbsp;? Partage-la vers Biblib.</h3>
+        <ol class="bb-numbered">
+          <li>Sur la fiche de l’œuvre, touche Partager.</li>
+          <li>Dans la rangée des apps, choisis Biblib.</li>
+          <li>Biblib lit la fiche et cherche l’œuvre dans tes bibliothèques.</li>
+        </ol>
+        <p class="bb-muted bb-small">Ça marche dans Safari et dans les apps qui ont un bouton Partager&nbsp;: Amazon, Fnac, Babelio, Allociné, SensCritique… Pour les livres, les films, les disques et les jeux.</p>
+      </div>
+      <div class="bb-duo">
+        <img src="{{ '/assets/demo-partage.webp' | relative_url }}" width="480" height="1010" loading="lazy" alt="Sur la fiche d’un livre dans une librairie en ligne, le menu Partager d’iPhone propose Biblib.">
+        <img src="{{ '/assets/demo-partage-resultat.webp' | relative_url }}" width="480" height="1010" loading="lazy" alt="Biblib répond : Vingt mille lieues sous les mers est disponible dans ta bibli, avec un bouton Réserver.">
+      </div>
+    </article>
+    <article class="bb-feature" aria-labelledby="titre-commande">
+      <div class="bb-stack">
+        <p class="bb-kicker">Raccourci vers le scanner</p>
+        <h3 id="titre-commande">Scanne depuis le centre de contrôle ou l’écran verrouillé</h3>
+        <ol class="bb-numbered">
+          <li>Ouvre le centre de contrôle, puis touche + en haut à gauche.</li>
+          <li>Touche «&nbsp;Ajouter une commande&nbsp;».</li>
+          <li>Cherche «&nbsp;Biblib&nbsp;», puis choisis «&nbsp;Scanner un livre&nbsp;».</li>
+        </ol>
+        <p>Un appui, et Biblib s’ouvre sur le scanner, même quand ton iPhone est verrouillé.</p>
+        <p class="bb-muted bb-small">À partir d’iOS 18. La commande va aussi sur l’écran verrouillé et sur le bouton Action (iPhone 15 Pro et plus récents).</p>
+      </div>
+      <div class="bb-duo">
+        <img src="{{ '/assets/demo-centre-controle.webp' | relative_url }}" width="480" height="1010" loading="lazy" alt="Le centre de contrôle d’iPhone, avec la commande Scanner un livre de Biblib.">
+        <img src="{{ '/assets/demo-ecran-verrouille.webp' | relative_url }}" width="480" height="1010" loading="lazy" alt="L’écran verrouillé d’iPhone, avec la commande de Biblib en bas à gauche.">
+      </div>
+    </article>
+  </div>
+  <p class="bb-muted bb-small">Les vidéos de ces deux astuces sont dans l’app&nbsp;: Réglages, puis «&nbsp;Vérifier encore plus vite&nbsp;».</p>
+</section>
+
+<section class="bb-wrap bb-section" data-panneau="chrome" aria-labelledby="titre-etapes-chrome"{% unless chrome %} hidden{% endunless %}>
+  <div class="bb-demo">
+    <div class="bb-stack">
+      <h2 id="titre-etapes-chrome">Dans Chrome, en 3 étapes</h2>
+      <ol class="bb-big-steps">
+        <li><span class="bb-step-num" aria-hidden="true">1</span><div><h3>Choisis tes bibliothèques</h3><p>Ajoute l’extension à Chrome. Dans ses réglages, choisis les bibliothèques où tu vas.</p></div></li>
+        <li><span class="bb-step-num" aria-hidden="true">2</span><div><h3>Ouvre la fiche d’une œuvre</h3><p>Sur Amazon, la Fnac, Babelio, SensCritique… La pastille Biblib apparaît sur la page.</p></div></li>
+        <li><span class="bb-step-num" aria-hidden="true">3</span><div><h3>Clique sur la pastille</h3><p>Le panneau te dit où l’œuvre est disponible. Ouvre sa page dans le catalogue de ta bibliothèque pour la réserver.</p></div></li>
+      </ol>
+      <div class="bb-actions"><a class="bb-button bb-primary" href="https://chromewebstore.google.com/detail/biblib-ce-livre-est-il-da/bigjgcfejleibpibbmmnpoagdckoacmn">Ajouter à Chrome</a><span class="bb-muted bb-small">Gratuit, sans compte, sans pub.</span></div>
+    </div>
+    <figure>
+      <div class="bb-browser"><img src="{{ '/assets/chrome.jpg' | relative_url }}" width="840" height="525" alt="Sur la fiche d’un livre dans une librairie en ligne, le panneau de l’extension indique que La Horde du Contrevent est disponible à la Médiathèque du Burck."></div>
+      <figcaption>Le panneau de l’extension sur la fiche d’un livre</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="bb-tint" aria-labelledby="titre-bibli"><div class="bb-wrap bb-section">
+  <p class="bb-kicker">Biblib ne prête rien. Ta bibli, si.</p>
+  <h2 id="titre-bibli">La bibli, c’est un click and collect gratuit</h2>
+  <p class="bb-lead">Biblib te dit où trouver l’œuvre. Ta bibliothèque te la prête. Et emprunter est devenu très simple.</p>
+  <ol class="bb-journey">
+    <li>
+      <span class="bb-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><circle cx="8.5" cy="11" r="2" /><path d="M5.5 16c.6-1.4 1.7-2 3-2s2.4.6 3 2M14.5 10h4M14.5 13.5h3" /></svg></span>
+      <h3>Inscris-toi une fois</h3>
+      <p>Dans beaucoup de bibliothèques, l’inscription est gratuite. Ailleurs, elle coûte quelques euros par an. Entrer et lire sur place reste libre et gratuit.</p>
+    </li>
+    <li>
+      <span class="bb-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4v16H4zM10 4h4v16h-4zM16.2 5.2l3.6-1 3 15.4-3.6 1z" /></svg></span>
+      <h3>Emprunte beaucoup</h3>
+      <p>Avec ta carte, emprunte des livres, des BD, des films, des disques, parfois des jeux. Souvent plusieurs à la fois, pour quelques semaines.</p>
+    </li>
+    <li>
+      <span class="bb-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3" /><path d="M9.5 12l2 2 3.5-4" /></svg></span>
+      <h3>Réserve en ligne</h3>
+      <p>Beaucoup de bibliothèques te laissent réserver sur leur site. Elles te préviennent quand l’œuvre t’attend. Tu passes la prendre, comme un click and collect.</p>
+    </li>
+    <li>
+      <span class="bb-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5" /><path d="M7 9h10M12 13v5M9.5 15.5L12 18l2.5-2.5" /></svg></span>
+      <h3>Rends dans la boîte de retour</h3>
+      <p>Beaucoup de bibliothèques ont une boîte de retour, souvent ouverte même quand elles sont fermées. Tu déposes l’œuvre, comme dans un casier de point relais.</p>
+    </li>
+  </ol>
+  <div class="bb-bibli-foot">
+    <p><strong>Gratuit ou presque, sans livraison à attendre.</strong> Les conditions changent d’une bibliothèque à l’autre&nbsp;: regarde sur son site.</p>
+    <a class="bb-button bb-secondary" href="{{ '/bibliotheques/' | relative_url }}#recherche">Trouve ta bibliothèque</a>
+  </div>
+</div></section>
+
+<section class="bb-wrap bb-section" aria-labelledby="titre-resultats">
+  <h2 id="titre-resultats">Comprends les résultats</h2>
+  <ul class="bb-status-grid">
+    <li class="bb-status-ok"><p class="bb-status-name"><span class="bb-status-mark" aria-hidden="true"></span>Disponible</p><p>Un exemplaire est en rayon. Biblib te dit dans quelle bibliothèque. Réserve-le ou passe le prendre.</p></li>
+    <li class="bb-status-wait"><p class="bb-status-name"><span class="bb-status-mark" aria-hidden="true"></span>Emprunté, à réserver</p><p>Tous les exemplaires sont prêtés. Biblib donne la date de retour quand le catalogue l’indique. Réserve-le&nbsp;: ta bibli te prévient à son retour.</p></li>
+    <li class="bb-status-check"><p class="bb-status-name"><span class="bb-status-mark" aria-hidden="true"></span>Disponibilité à vérifier</p><p>L’œuvre est au catalogue, mais le catalogue ne dit pas si un exemplaire est en rayon. Ouvre sa page pour vérifier.</p></li>
+  </ul>
+</section>
+<script src="{{ '/assets/fonctionnement.js' | relative_url }}" defer></script>

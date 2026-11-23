@@ -43,10 +43,10 @@ permalink: /
       <div class="bb-wrap bb-section bb-check">
         <div>
           <h2>Ta bibliothèque est-elle compatible&nbsp;?</h2>
-          <p class="bb-muted">Cherche ta ville, ton code postal ou le nom de ton réseau.</p>
+          <p class="bb-muted">Cherche ta ville, ton code postal ou le nom de ta bibliothèque.</p>
         </div>
         <form action="{{ '/bibliotheques/' | relative_url }}#recherche" method="get" role="search">
-          <label for="biblib-recherche-accueil">Ville, code postal ou réseau</label>
+          <label for="biblib-recherche-accueil">Ville, code postal ou bibliothèque</label>
           <div class="bb-field">
             <input id="biblib-recherche-accueil" type="search" name="ville" placeholder="Ex. Bordeaux" autocomplete="off">
             <button class="bb-button bb-primary" type="submit">Rechercher</button>

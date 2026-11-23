@@ -4,7 +4,7 @@ baseurl: /biblib-site
 lang: fr
 description: Envie de l’acheter ? Ta bibli te le prête !
 markdown: kramdown
-exclude: [README.md]
+exclude: [README.md, tools]
 defaults:
   - scope: { path: "" }
     values: { layout: default }
