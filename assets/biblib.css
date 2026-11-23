@@ -33,6 +33,9 @@
     --status-ok: #578312;
     --status-wait: #a76123;
     --status-check: #7858ae;
+    --device: #2a1a4a;
+    --device-edge: #4a3670;
+    --glow: #c4a6fa99;
     --title-font: "Biblib Fredoka", system-ui, sans-serif;
     background: var(--paper);
     color: var(--ink);
@@ -62,6 +65,9 @@
       --status-ok: #84cc16;
       --status-wait: #f0a35e;
       --status-check: #a78bfa;
+      --device: #05020c;
+      --device-edge: #3a2c5c;
+      --glow: #6230bd88;
     }
   }
   #biblib-maquette * { box-sizing: border-box; }
@@ -105,6 +111,29 @@
   #biblib-maquette .bb-hero-copy { max-width: 39ch; padding-block: 2px 4px; }
   #biblib-maquette .bb-browser { position: relative; aspect-ratio: 461 / 424; overflow: hidden; border-radius: 13px; background: var(--frame); border: 1px solid var(--frame-line); box-shadow: 0 13px 28px var(--shadow); }
   #biblib-maquette .bb-browser img { position: absolute; top: -11.8%; left: -75.3%; width: 182.22%; height: auto; max-width: none; }
+  /* Accueil : l'app iPhone en train de scanner. Le cadre est en CSS, l'écran est une vraie capture de l'app. */
+  #biblib-maquette .bb-showcase { position: relative; display: grid; justify-items: center; padding-block: 8px; isolation: isolate; }
+  #biblib-maquette .bb-showcase::before { content: ""; position: absolute; z-index: -1; inset: 6% 4% 12%; border-radius: 50%; background: radial-gradient(closest-side, var(--glow), transparent); }
+  #biblib-maquette .bb-iphone { width: clamp(220px, 23vw, 280px); padding: 9px; border-radius: 46px; background: var(--device); box-shadow: inset 0 0 0 2px var(--device-edge), 0 30px 60px -12px var(--shadow), 0 12px 24px -10px var(--shadow); transform: rotate(-4deg); }
+  #biblib-maquette .bb-iphone-screen { position: relative; aspect-ratio: 440 / 956; overflow: hidden; border-radius: 37px; background: #f1e9fc; }
+  #biblib-maquette .bb-iphone-screen img { position: absolute; left: 0; top: 6.49%; width: 100%; height: auto; }
+  #biblib-maquette .bb-iphone-status { position: absolute; inset: 0 0 auto; height: 6.49%; display: flex; align-items: center; justify-content: space-between; padding: 4% 9% 0 12%; color: #2a1a4a; fill: currentColor; font: 650 .8rem/1 system-ui, sans-serif; }
+  #biblib-maquette .bb-iphone-status svg { width: 15%; height: auto; }
+  #biblib-maquette .bb-iphone-island { position: absolute; top: 2.2%; left: 50%; width: 30%; height: 3.6%; translate: -50% 0; border-radius: 99px; background: #000; }
+  /* Ligne de lecture dans le viseur vert de la capture (position mesurée sur l'image). */
+  #biblib-maquette .bb-scanline { position: absolute; left: 15.5%; width: 69%; top: 23%; height: 3px; border-radius: 3px; background: #a3e635; box-shadow: 0 0 8px 2px #a3e635b3, 0 0 22px 6px #a3e63555; animation: bb-scan 2.4s ease-in-out infinite alternate; }
+  @keyframes bb-scan { to { top: 31.5%; } }
+  #biblib-maquette .bb-verdict { position: absolute; top: 47%; left: 50%; width: min(108%, 330px); translate: -64% 0; rotate: 3deg; padding: 12px; border-radius: 20px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 22px 44px -14px var(--shadow), 0 6px 14px -6px var(--shadow); animation: bb-pop 4.8s ease-in-out infinite; }
+  #biblib-maquette .bb-verdict-head { display: flex; align-items: center; gap: 10px; }
+  #biblib-maquette .bb-verdict-icon { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 50%; background: #a3e635; color: #2a1a4a; }
+  #biblib-maquette .bb-verdict b { display: block; font: 700 1rem/1.15 var(--title-font); }
+  #biblib-maquette .bb-verdict small { display: block; margin-top: 2px; color: var(--muted); font-size: .75rem; }
+  #biblib-maquette .bb-verdict p { margin-top: 10px; padding: 10px 14px; border-radius: 13px; background: #a3e635; color: #2a1a4a; font: 700 1.02rem/1.2 var(--title-font); }
+  @keyframes bb-pop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @media (prefers-reduced-motion: reduce) {
+    #biblib-maquette .bb-scanline, #biblib-maquette .bb-verdict { animation: none; }
+    #biblib-maquette .bb-scanline { top: 27%; }
+  }
   #biblib-maquette figcaption { font-size: .875rem; color: var(--muted); text-align: center; margin-top: 12px; }
   #biblib-maquette .bb-formats { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; list-style: none; padding-block: 17px; border-bottom: 1px solid var(--line); }
   #biblib-maquette .bb-formats li { display: flex; align-items: center; gap: 7px; padding-block: 6px; font-size: .85rem; font-weight: 650; }
@@ -164,6 +193,7 @@
     #biblib-maquette .bb-nav a { font-size: .875rem; }
     #biblib-maquette .bb-nav a[data-page-link="accueil"] { display: none; }
     #biblib-maquette .bb-hero figure { max-width: 380px; margin-inline: auto; width: 100%; }
+    #biblib-maquette .bb-verdict { width: min(94%, 320px); translate: -50% 0; }
     #biblib-maquette .bb-steps { gap: 15px; }
     #biblib-maquette .bb-formats { justify-content: flex-start; column-gap: 16px; }
   }
