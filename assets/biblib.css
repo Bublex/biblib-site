@@ -108,6 +108,7 @@
   #biblib-maquette .bb-hero { background: var(--lavender); }
   #biblib-maquette .bb-hero-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(18px, 3.5vw, 40px); align-items: center; padding-block: clamp(30px, 5.8vw, 70px); }
   #biblib-maquette .bb-highlight { background: linear-gradient(transparent 64%, var(--mark) 64% 93%, transparent 93%); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  #biblib-maquette .bb-hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.6rem); }
   #biblib-maquette .bb-hero-copy { max-width: 39ch; padding-block: 2px 4px; }
   #biblib-maquette .bb-browser { position: relative; aspect-ratio: 461 / 424; overflow: hidden; border-radius: 13px; background: var(--frame); border: 1px solid var(--frame-line); box-shadow: 0 13px 28px var(--shadow); }
   #biblib-maquette .bb-browser img { position: absolute; top: -11.8%; left: -75.3%; width: 182.22%; height: auto; max-width: none; }

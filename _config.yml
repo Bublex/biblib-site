@@ -2,7 +2,7 @@ title: Biblib
 url: https://bublex.github.io
 baseurl: /biblib-site
 lang: fr
-description: Et si la bibli l’avait déjà ?
+description: Envie de l’acheter ? Ta bibli te le prête !
 markdown: kramdown
 exclude: [README.md]
 defaults:
