@@ -3,12 +3,19 @@ layout: site
 title: Aide
 permalink: /aide/
 nav: aide
-description: Configure Biblib sur ton appareil et résous les problèmes de recherche ou de réservation.
+description: "Questions sur Biblib et sur les bibliothèques : inscription, réservation, boîte de retour, jeux de société, films. Et dépannage."
 ---
 <div class="bb-tint">
   <div class="bb-wrap bb-section bb-intro">
     <h1>Aide</h1>
-    <p>Configure Biblib sur ton appareil ou <a class="bb-link" href="#depannage">résous un problème</a>.</p>
+    <p>Trouve une réponse sur Biblib et sur le fonctionnement des bibliothèques.</p>
+    <nav class="bb-faq-nav" aria-label="Thèmes de l’aide">
+      <a href="#bibliotheques">Les bibliothèques</a>
+      <a href="#reserver">Réserver et rendre</a>
+      <a href="#jeux">Jeux, films et musique</a>
+      <a href="#biblib">Biblib</a>
+      <a href="#depannage">Dépannage</a>
+    </nav>
   </div>
 </div>
 
@@ -17,7 +24,7 @@ description: Configure Biblib sur ton appareil et résous les problèmes de rech
   <div class="bb-platforms">
     <article class="bb-platform">
       <h3>Application Biblib sur iPhone</h3>
-      <p>Scanne un code-barres ou partage la fiche d’une œuvre depuis Safari.</p>
+      <p>Scanne un code-barres, ou partage la fiche d’une œuvre depuis Safari, Amazon ou la Fnac.</p>
       <a class="bb-link" href="{{ '/fonctionnement/iphone/' | relative_url }}">Voir le guide de l’application iPhone</a>
     </article>
     <article class="bb-platform">
@@ -34,7 +41,126 @@ description: Configure Biblib sur ton appareil et résous les problèmes de rech
   </div>
 </section>
 
-<section id="depannage" class="bb-wrap bb-section bb-stack" aria-labelledby="titre-depannage">
+<section id="bibliotheques" class="bb-wrap bb-section bb-stack bb-faq-group" aria-labelledby="titre-bibliotheques">
+  <h2 id="titre-bibliotheques">Les bibliothèques</h2>
+  <p class="bb-lead">Chaque bibliothèque fixe ses règles. Ces réponses décrivent les cas les plus courants. Le règlement de ta bibliothèque donne les règles exactes.</p>
+  <div class="bb-faq">
+    <details>
+      <summary>Bibliothèque, médiathèque, ludothèque&nbsp;: quelle différence&nbsp;?</summary>
+      <p>Une bibliothèque prête surtout des livres. Une médiathèque prête aussi des films, de la musique, de la presse et souvent des jeux vidéo. Une ludothèque est un lieu pour jouer&nbsp;: jeux de société, jouets, grands jeux en bois.</p>
+      <p>Aujourd’hui, ces mots se mélangent. Beaucoup de bibliothèques prêtent des films, et beaucoup de médiathèques ont un espace jeux. Dans Biblib, tous ces lieux s’appellent «&nbsp;bibliothèques&nbsp;».</p>
+    </details>
+    <details>
+      <summary>L’inscription est-elle payante&nbsp;?</summary>
+      <p>Dans beaucoup de bibliothèques, l’inscription est gratuite. Ailleurs, elle coûte quelques euros par an. Elle est souvent gratuite pour les enfants et les étudiants.</p>
+      <p>Entrer, lire et consulter sur place est libre et gratuit dans les bibliothèques municipales, même sans carte. Les ludothèques ont parfois leur propre adhésion.</p>
+    </details>
+    <details>
+      <summary>Comment m’inscrire&nbsp;?</summary>
+      <p>Va à l’accueil de la bibliothèque avec une pièce d’identité. Certaines demandent aussi un justificatif de domicile. Beaucoup proposent une préinscription sur leur site.</p>
+      <p>Tu reçois une carte de lecteur et un compte sur le site du catalogue. Souvent, tu n’as pas besoin d’habiter dans la commune.</p>
+      <p>Dans l’app iPhone, enregistre ta carte&nbsp;: son code-barres s’affiche sur ton écran, prêt pour la borne de prêt.</p>
+    </details>
+    <details>
+      <summary>Combien de documents puis-je emprunter, et pour combien de temps&nbsp;?</summary>
+      <p>Le plus souvent, tu empruntes plusieurs documents à la fois, pour trois ou quatre semaines. Les nouveautés et les jeux ont parfois une durée plus courte.</p>
+      <p>Tu peux souvent prolonger le prêt sur le site du catalogue, si personne n’a réservé le document. En cas de retard, la bibliothèque peut bloquer ta carte quelques jours ou demander une petite amende.</p>
+    </details>
+    <details>
+      <summary>Ma carte marche-t-elle dans toutes les bibliothèques du réseau&nbsp;?</summary>
+      <p>Un réseau regroupe les bibliothèques d’une ville ou d’une agglomération. Elles partagent un même catalogue. Le plus souvent, une seule carte sert dans toutes.</p>
+      <p>Biblib cherche dans tout le réseau. Il te dit dans quelle bibliothèque l’œuvre est en rayon.</p>
+      <p><a class="bb-link" href="{{ '/bibliotheques/' | relative_url }}#recherche">Voir les bibliothèques de ton réseau</a></p>
+    </details>
+  </div>
+</section>
+
+<section id="reserver" class="bb-wrap bb-section bb-stack bb-faq-group" aria-labelledby="titre-reserver">
+  <h2 id="titre-reserver">Réserver et rendre</h2>
+  <div class="bb-faq">
+    <details>
+      <summary>Comment réserver une œuvre&nbsp;?</summary>
+      <p>Dans Biblib, touche «&nbsp;Réserver&nbsp;». La page de l’œuvre s’ouvre dans le catalogue de ta bibliothèque. Connecte-toi avec ton compte lecteur, puis choisis la bibliothèque où tu veux la prendre.</p>
+      <p>Biblib ne réserve pas à ta place. Il n’a pas accès à ton compte lecteur.</p>
+    </details>
+    <details>
+      <summary>Puis-je réserver une œuvre déjà empruntée&nbsp;?</summary>
+      <p>Oui, dans la plupart des bibliothèques. Tu prends place dans une file d’attente. La bibliothèque te prévient quand l’œuvre revient pour toi.</p>
+      <p>Biblib affiche la date de retour quand le catalogue la donne. C’est une date prévue&nbsp;: le lecteur peut prolonger son prêt ou rendre l’œuvre en retard.</p>
+    </details>
+    <details>
+      <summary>Puis-je réserver une œuvre disponible en rayon&nbsp;?</summary>
+      <p>Cela dépend de la bibliothèque. Certaines la mettent de côté pour toi. D’autres réservent seulement les œuvres empruntées, ou celles d’une autre bibliothèque du réseau.</p>
+      <p>Sinon, va la prendre en rayon. Dans l’app iPhone, «&nbsp;Récupérer&nbsp;» ouvre l’itinéraire. Biblib montre aussi la cote quand le catalogue la donne&nbsp;: c’est l’étiquette sur le dos de l’œuvre, qui dit où la trouver.</p>
+    </details>
+    <details>
+      <summary>Combien de temps l’œuvre réservée m’attend-elle&nbsp;?</summary>
+      <p>Quand l’œuvre est prête, la bibliothèque te prévient, souvent par e-mail ou par SMS. Elle la garde pour toi pendant quelques jours, souvent une à deux semaines. Après ce délai, l’œuvre passe au lecteur suivant.</p>
+    </details>
+    <details>
+      <summary>C’est quoi, une boîte de retour&nbsp;?</summary>
+      <p>C’est une boîte dans le mur ou devant l’entrée de la bibliothèque. Tu y déposes tes documents, même quand la bibliothèque est fermée. Elle enregistre le retour plus tard, souvent le jour d’ouverture suivant.</p>
+      <p>Lis les consignes affichées sur la boîte. Les jeux de société, les liseuses et les objets fragiles se rendent souvent au comptoir.</p>
+    </details>
+    <details>
+      <summary>Puis-je rendre une œuvre dans une autre bibliothèque du réseau&nbsp;?</summary>
+      <p>Souvent, oui&nbsp;: la bibliothèque renvoie l’œuvre à sa bibliothèque d’origine. Certains réseaux refusent ce retour pour les jeux ou les documents fragiles. Demande à l’accueil.</p>
+    </details>
+  </div>
+</section>
+
+<section id="jeux" class="bb-wrap bb-section bb-stack bb-faq-group" aria-labelledby="titre-jeux">
+  <h2 id="titre-jeux">Jeux, films et musique</h2>
+  <div class="bb-faq">
+    <details>
+      <summary>Puis-je emprunter des jeux de société&nbsp;?</summary>
+      <p>Cela dépend de la bibliothèque. Beaucoup de bibliothèques et de ludothèques prêtent des jeux. D’autres les proposent seulement sur place&nbsp;: tu joues dans l’espace jeux, sans les emporter.</p>
+      <p>Quand le catalogue indique «&nbsp;Exclu du prêt&nbsp;» ou «&nbsp;Consultation sur place&nbsp;», Biblib affiche «&nbsp;Sur place&nbsp;». Le jeu est là, mais il ne sort pas.</p>
+      <p>Un jeu emprunté se rend souvent au comptoir, pour que la bibliothèque compte les pièces. Le prêt de jeux demande parfois une adhésion à part.</p>
+    </details>
+    <details>
+      <summary>Les bibliothèques prêtent-elles des jeux vidéo&nbsp;?</summary>
+      <p>Beaucoup de médiathèques prêtent des jeux vidéo, parfois à partir d’un certain âge. D’autres les proposent seulement sur place, sur leurs consoles.</p>
+      <p>Biblib vérifie la console. Si ta bibliothèque a le jeu sur une autre console, Biblib te le dit, par exemple «&nbsp;Sur PS4&nbsp;».</p>
+    </details>
+    <details>
+      <summary>Et les films et la musique&nbsp;?</summary>
+      <p>Les médiathèques prêtent des DVD, des Blu-ray et des CD. Scanne leur code-barres comme celui d’un livre.</p>
+      <p>Pour un film ou une série, Biblib cherche aussi dans Médiathèque Numérique, un service de films en ligne. Pour le regarder, il faut un accès par une bibliothèque abonnée. Biblib ne vérifie pas si ta bibliothèque est abonnée.</p>
+    </details>
+  </div>
+</section>
+
+<section id="biblib" class="bb-wrap bb-section bb-stack bb-faq-group" aria-labelledby="titre-biblib">
+  <h2 id="titre-biblib">Biblib</h2>
+  <div class="bb-faq">
+    <details>
+      <summary>Biblib est-il un service de ma bibliothèque&nbsp;?</summary>
+      <p>Non. Biblib est un projet indépendant&nbsp;: gratuit, sans compte et sans pub. Il lit le catalogue public de ta bibliothèque, comme toi sur son site.</p>
+      <p>Les prêts, les réservations et ton compte lecteur restent chez ta bibliothèque. Pour une question sur ton compte, contacte-la.</p>
+    </details>
+    <details>
+      <summary>Une œuvre «&nbsp;Disponible&nbsp;» est-elle sûre d’être en rayon&nbsp;?</summary>
+      <p>Biblib lit le catalogue au moment de ta recherche. Un exemplaire disponible peut quand même être en cours de rangement, mal rangé ou dans les mains d’un autre lecteur.</p>
+      <p>Pour être sûr, réserve-le, ou appelle ta bibliothèque.</p>
+    </details>
+    <details>
+      <summary>Que veut dire «&nbsp;Disponibilité à vérifier&nbsp;»&nbsp;?</summary>
+      <p>Le catalogue montre l’œuvre, mais pas l’état de ses exemplaires. Ouvre sa page dans le catalogue, ou demande à l’accueil de ta bibliothèque.</p>
+    </details>
+    <details>
+      <summary>Pourquoi Biblib me montre-t-il une autre édition&nbsp;?</summary>
+      <p>Un même livre a souvent plusieurs éditions&nbsp;: grand format, poche, nouvelle traduction. Chaque édition a son propre code-barres. Si ta bibliothèque a une autre édition, Biblib te la montre, avec ce qui change, par exemple «&nbsp;Gallimard, 2007&nbsp;».</p>
+    </details>
+    <details>
+      <summary>Quelles données Biblib garde-t-il&nbsp;?</summary>
+      <p>Biblib ne collecte aucune donnée personnelle. Il n’a ni compte, ni serveur, ni statistiques. Tes réglages et tes œuvres enregistrées restent sur ton appareil.</p>
+      <p><a class="bb-link" href="{{ '/confidentialite' | relative_url }}">Lire la politique de confidentialité</a></p>
+    </details>
+  </div>
+</section>
+
+<section id="depannage" class="bb-wrap bb-section bb-stack bb-faq-group" aria-labelledby="titre-depannage">
   <h2 id="titre-depannage">Dépannage</h2>
   <div class="bb-faq">
     <details>

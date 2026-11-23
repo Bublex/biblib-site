@@ -206,7 +206,6 @@
   #biblib-maquette .bb-legacy table { display: block; overflow-x: auto; border-collapse: collapse; }
   #biblib-maquette .bb-legacy :where(th, td) { padding: 6px 8px; border: 1px solid var(--line); text-align: left; }
   #biblib-maquette .bb-legacy code { overflow-wrap: anywhere; }
-  #biblib-maquette #depannage { border-top: 1px solid var(--line); }
   @media (max-width: 570px) {
     #biblib-maquette .bb-legacy img[align="right"] { float: none; display: block; margin-block: 8px; }
     /* Sur mobile, chaque ligne du tableau devient un bloc : le nom, puis la valeur en pleine largeur. */
@@ -314,4 +313,21 @@
     #biblib-maquette .bb-cta-layout { grid-template-columns: 1fr; }
     #biblib-maquette .bb-cta-phone { width: 220px; margin-bottom: -30%; }
     #biblib-maquette .bb-cta .bb-actions .bb-button { flex: 1 1 100%; }
+  }
+
+  /* Aide : thèmes en haut de page, puis une liste de questions par thème */
+  #biblib-maquette .bb-faq-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  #biblib-maquette .bb-faq-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 16px; border: 1px solid var(--line); border-radius: 30px; background: var(--paper); font-size: .9rem; font-weight: 700; text-decoration: none; }
+  #biblib-maquette .bb-faq-nav a:hover { border-color: var(--purple); }
+  #biblib-maquette .bb-faq-group { scroll-margin-top: 12px; }
+  #biblib-maquette .bb-faq-group + .bb-faq-group { padding-top: 0; }
+  #biblib-maquette .bb-faq-group .bb-lead { margin-top: -6px; }
+  #biblib-maquette .bb-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 1.05rem; list-style: none; }
+  #biblib-maquette .bb-faq summary::-webkit-details-marker { display: none; }
+  #biblib-maquette .bb-faq summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-right: 6px; border-right: 2.5px solid var(--purple); border-bottom: 2.5px solid var(--purple); rotate: 45deg; translate: 0 -2px; transition: rotate .15s; }
+  #biblib-maquette .bb-faq details[open] summary::after { rotate: 225deg; translate: 0 2px; }
+  #biblib-maquette .bb-faq summary:hover { color: var(--purple); }
+  #biblib-maquette .bb-faq details p + p { margin-top: -4px; }
+  @media (prefers-reduced-motion: reduce) {
+    #biblib-maquette .bb-faq summary::after { transition: none; }
   }
