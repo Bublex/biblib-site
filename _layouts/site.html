@@ -38,5 +38,17 @@
       <li><a href="mailto:felix-biblib@posteo.net">Écrire à Biblib</a></li>
     </ul>
   </footer>
+  {%- comment -%} Sur ordinateur, les liens vers l'App Store ouvrent cette fenêtre (assets/telecharger.js). Sur téléphone, ils mènent à l'App Store. {%- endcomment %}
+  <dialog class="bb-dialog" id="biblib-app-store" aria-labelledby="biblib-titre-app-store">
+    <div class="bb-dialog-body">
+      <form method="dialog"><button class="bb-dialog-close" aria-label="Fermer"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" /></svg></button></form>
+      <h2 id="biblib-titre-app-store">Biblib sur ton iPhone</h2>
+      <p class="bb-muted">Scanne ce code avec l’appareil photo de ton iPhone.</p>
+      {% include qr-app-store.svg %}
+      <p class="bb-small bb-muted">100&nbsp;% gratuit, sans compte, sans pub.</p>
+      <a class="bb-small" href="https://apps.apple.com/fr/app/biblib-dispo-en-biblioth%C3%A8que/id6828761341">Ouvrir la page de l’App Store</a>
+    </div>
+  </dialog>
+  <script src="{{ '/assets/telecharger.js' | relative_url }}" defer></script>
 </body>
 </html>

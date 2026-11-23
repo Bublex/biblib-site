@@ -148,9 +148,7 @@
   #biblib-maquette .bb-tint { background: var(--lavender); }
   #biblib-maquette .bb-intro h1 { font-size: clamp(2.35rem, 5vw, 3.7rem); }
   #biblib-maquette .bb-intro p, #biblib-maquette .bb-lead { color: var(--muted); max-width: 63ch; margin-top: 10px; }
-  #biblib-maquette .bb-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; gap: 20px; margin-top: 20px; }
-  #biblib-maquette .bb-steps li { border-top: 1px solid var(--rule); padding-top: 14px; }
-  #biblib-maquette .bb-steps p, #biblib-maquette .bb-platform p { margin-top: 6px; font-size: .92rem; }
+  #biblib-maquette .bb-platform p { margin-top: 6px; font-size: .92rem; }
   #biblib-maquette .bb-foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 20px; border-top: 1px solid var(--line); padding-block: 14px; }
   #biblib-maquette .bb-foot ul { display: flex; flex-wrap: wrap; gap: 0 14px; padding: 0; list-style: none; }
   #biblib-maquette .bb-foot a { display: inline-flex; align-items: center; min-height: 44px; font-size: .875rem; }
@@ -190,13 +188,12 @@
     #biblib-maquette .bb-platforms { grid-template-columns: 1fr; }
   }
   @media (max-width: 570px) {
-    #biblib-maquette .bb-hero-layout, #biblib-maquette .bb-check, #biblib-maquette .bb-demo, #biblib-maquette .bb-steps { grid-template-columns: 1fr; }
+    #biblib-maquette .bb-hero-layout, #biblib-maquette .bb-check, #biblib-maquette .bb-demo { grid-template-columns: 1fr; }
     #biblib-maquette .bb-nav { gap: 0 10px; }
     #biblib-maquette .bb-nav a { font-size: .875rem; }
     #biblib-maquette .bb-nav a[data-page-link="accueil"] { display: none; }
     #biblib-maquette .bb-hero figure { max-width: 380px; margin-inline: auto; width: 100%; }
     #biblib-maquette .bb-verdict { width: min(94%, 320px); translate: -50% 0; }
-    #biblib-maquette .bb-steps { gap: 15px; }
     #biblib-maquette .bb-formats { justify-content: flex-start; column-gap: 16px; }
   }
 
@@ -273,4 +270,48 @@
     #biblib-maquette .bb-big-steps li { grid-template-columns: 46px minmax(0, 1fr); gap: 12px; }
     #biblib-maquette .bb-step-num { width: 46px; height: 46px; font-size: 1.45rem; }
     #biblib-maquette .bb-big-steps h3 { padding-top: 2px; }
+  }
+
+  /* Accueil : de la découverte au prêt (trois étapes illustrées par l'app) */
+  #biblib-maquette .bb-path { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.5vw, 28px); margin-block: 28px 18px; }
+  #biblib-maquette .bb-path > li { display: grid; align-content: start; gap: 18px; padding: 14px 14px 22px; border-radius: 24px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 18px 36px -24px var(--shadow); }
+  #biblib-maquette .bb-path-visual { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 16px; background: var(--lavender); }
+  #biblib-maquette .bb-path-visual img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  #biblib-maquette .bb-path-scanline { position: absolute; left: 25%; width: 50%; top: 30%; height: 3px; border-radius: 3px; background: #a3e635; box-shadow: 0 0 8px 2px #a3e635b3, 0 0 22px 6px #a3e63555; animation: bb-path-scan 2.4s ease-in-out infinite alternate; }
+  @keyframes bb-path-scan { to { top: 62%; } }
+  #biblib-maquette .bb-path-text { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 14px; align-items: start; padding-inline: 6px; }
+  #biblib-maquette .bb-path .bb-step-num { width: 52px; height: 52px; font-size: 1.6rem; }
+  #biblib-maquette .bb-path h3 { font-size: clamp(1.3rem, 2.1vw, 1.6rem); padding-top: 6px; }
+  #biblib-maquette .bb-path p { margin-top: 6px; font-size: 1.02rem; }
+  /* Accueil : appel à télécharger, en bas de page */
+  #biblib-maquette .bb-cta { background: var(--primary-bg); color: var(--on-primary); overflow: hidden; }
+  #biblib-maquette .bb-cta h2 { color: var(--on-primary); font-size: clamp(1.9rem, 4vw, 2.9rem); }
+  #biblib-maquette .bb-cta p { max-width: 48ch; }
+  #biblib-maquette .bb-cta-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 24px 48px; padding-block: clamp(36px, 6vw, 72px) 0; }
+  #biblib-maquette .bb-cta-layout > .bb-stack { padding-bottom: clamp(36px, 6vw, 72px); }
+  #biblib-maquette .bb-cta-main { background: var(--lime); color: #2a1a4a; font-size: 1rem; min-height: 52px; padding-inline: 22px; }
+  #biblib-maquette .bb-cta-main:hover { background: #bef264; }
+  #biblib-maquette .bb-cta-second { color: var(--on-primary); border-color: currentColor; font-size: 1rem; min-height: 52px; padding-inline: 22px; }
+  #biblib-maquette .bb-cta-second:hover { background: color-mix(in srgb, var(--on-primary) 12%, transparent); }
+  #biblib-maquette .bb-cta :focus-visible { outline-color: var(--lime); }
+  #biblib-maquette .bb-cta-phone { justify-self: center; align-self: end; width: min(100%, 280px); height: auto; margin-bottom: -18%; rotate: 4deg; filter: drop-shadow(0 24px 40px #00000059); }
+  /* Fenêtre « Biblib sur ton iPhone » : QR code vers l'App Store */
+  #biblib-maquette .bb-dialog { width: min(100% - 32px, 380px); padding: 0; border: 1px solid var(--line); border-radius: 24px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 60px -20px #000000a0; }
+  #biblib-maquette .bb-dialog::backdrop { background: #150d26b3; }
+  #biblib-maquette .bb-dialog-body { position: relative; display: grid; justify-items: center; gap: 10px; padding: 32px 28px 26px; text-align: center; }
+  #biblib-maquette .bb-dialog h2 { font-size: 1.7rem; }
+  #biblib-maquette .bb-qr { width: 220px; height: 220px; margin-block: 8px 4px; padding: 6px; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
+  #biblib-maquette .bb-dialog-close { position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--muted); }
+  #biblib-maquette .bb-dialog-close:hover { background: var(--lavender); color: var(--ink); }
+  #biblib-maquette .bb-dialog a { display: inline-flex; align-items: center; min-height: 44px; }
+  @media (prefers-reduced-motion: reduce) {
+    #biblib-maquette .bb-path-scanline { animation: none; top: 46%; }
+  }
+  @media (max-width: 860px) {
+    #biblib-maquette .bb-path { grid-template-columns: 1fr; max-width: 520px; }
+  }
+  @media (max-width: 640px) {
+    #biblib-maquette .bb-cta-layout { grid-template-columns: 1fr; }
+    #biblib-maquette .bb-cta-phone { width: 220px; margin-bottom: -30%; }
+    #biblib-maquette .bb-cta .bb-actions .bb-button { flex: 1 1 100%; }
   }

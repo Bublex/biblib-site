@@ -53,14 +53,38 @@ permalink: /
           </div>
         </form>
       </div>
-      <div class="bb-tint">
+      <section class="bb-tint" aria-labelledby="titre-parcours">
         <div class="bb-wrap bb-section">
-          <h2>De la découverte au prêt</h2>
-          <ul class="bb-steps">
-            <li><h3>Choisis tes bibliothèques</h3><p>Ajoute les bibliothèques que tu fréquentes dans les réglages.</p></li>
-            <li><h3>Vérifie une œuvre</h3><p>Scanne son code-barres sur iPhone ou ouvre sa fiche dans Chrome.</p></li>
-            <li><h3>Trouve où l’emprunter</h3><p>Repère les exemplaires disponibles. Ouvre la notice pour réserver auprès de ta bibliothèque.</p></li>
-          </ul>
-          <a class="bb-link" href="{{ '/fonctionnement/iphone/' | relative_url }}">Voir comment ça marche </a>
+          <h2 id="titre-parcours">De la découverte au prêt</h2>
+          <p class="bb-lead">Trois gestes, et l’œuvre t’attend à ta bibli.</p>
+          <ol class="bb-path">
+            <li>
+              <div class="bb-path-visual"><img src="{{ '/assets/etape-bibliotheques.webp' | relative_url }}" width="640" height="480" loading="lazy" alt="Dans les réglages de Biblib, la liste Mes bibliothèques, avec le bouton Bibliothèques autour de moi."></div>
+              <div class="bb-path-text"><span class="bb-step-num" aria-hidden="true">1</span><div><h3>Choisis tes bibliothèques</h3><p>Ajoute celles où tu vas, ou trouve celles autour de toi.</p></div></div>
+            </li>
+            <li>
+              <div class="bb-path-visual"><img src="{{ '/assets/etape-scan.webp' | relative_url }}" width="640" height="480" loading="lazy" alt="Le scanner de Biblib vise le code-barres d’un livre."><span class="bb-path-scanline" aria-hidden="true"></span></div>
+              <div class="bb-path-text"><span class="bb-step-num" aria-hidden="true">2</span><div><h3>Vérifie une œuvre</h3><p>Scanne son code-barres sur iPhone. Ou ouvre sa fiche sur Amazon, la Fnac ou Babelio.</p></div></div>
+            </li>
+            <li>
+              <div class="bb-path-visual"><img src="{{ '/assets/etape-reserver.webp' | relative_url }}" width="640" height="480" loading="lazy" alt="Biblib indique : Dispo dans tes biblis, en rayon à la bibliothèque Pierre Veilletet, avec les boutons Récupérer et Réserver."></div>
+              <div class="bb-path-text"><span class="bb-step-num" aria-hidden="true">3</span><div><h3>Emprunte-la</h3><p>Biblib te dit où elle est en rayon. Réserve-la, puis passe la prendre.</p></div></div>
+            </li>
+          </ol>
+          <a class="bb-link" href="{{ '/fonctionnement/iphone/' | relative_url }}">Voir comment ça marche →</a>
         </div>
-      </div>
+      </section>
+      <section class="bb-cta" aria-labelledby="titre-cta">
+        <div class="bb-wrap bb-cta-layout">
+          <div class="bb-stack">
+            <h2 id="titre-cta">Ta prochaine lecture t’attend peut-être à la bibli</h2>
+            <p>Installe Biblib. Avant d’acheter, vérifie en quelques secondes si ta bibli te la prête.</p>
+            <div class="bb-actions">
+              <a class="bb-button bb-cta-main" href="https://apps.apple.com/fr/app/biblib-dispo-en-biblioth%C3%A8que/id6828761341">Télécharger sur iPhone</a>
+              <a class="bb-button bb-cta-second" href="https://chromewebstore.google.com/detail/biblib-ce-livre-est-il-da/bigjgcfejleibpibbmmnpoagdckoacmn">Ajouter à Chrome</a>
+            </div>
+            <p class="bb-small">100&nbsp;% gratuit, sans compte, sans pub.</p>
+          </div>
+          <img class="bb-cta-phone" src="{{ '/assets/demo-partage-resultat.webp' | relative_url }}" width="480" height="1010" loading="lazy" alt="">
+        </div>
+      </section>
