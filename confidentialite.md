@@ -5,9 +5,9 @@ description: "Biblib ne collecte aucune donnée personnelle. Voici ce que l’ex
 
 # Politique de confidentialité de Biblib
 
-*Dernière mise à jour : 22 novembre 2026*
+*Dernière mise à jour : 23 novembre 2026*
 
-Biblib est une extension Chrome qui indique, sur la fiche d'un livre, d'un CD, d'un DVD ou d'un jeu de société consultée en ligne, s'il est présent et disponible dans les bibliothèques publiques que tu as choisies. Pour les films et séries, l'extension interroge aussi séparément le catalogue public de Médiathèque Numérique ; cette source est active par défaut et se désactive dans les réglages. L'app iPhone Biblib fait de même pour un livre dont tu scannes le code-barres ; elle est décrite [plus bas](#lapp-iphone).
+Biblib est une extension Chrome qui indique, sur la fiche d'un livre, d'un CD, d'un DVD, d'un jeu de société ou d'un jeu vidéo consultée en ligne, s'il est présent et disponible dans les bibliothèques publiques que tu as choisies. Pour les films et séries, l'extension interroge aussi séparément le catalogue public de Médiathèque Numérique ; cette source est active par défaut et se désactive dans les réglages. L'app iPhone Biblib fait de même pour un livre dont tu scannes le code-barres ; elle est décrite [plus bas](#lapp-iphone).
 
 ## En résumé
 
@@ -15,7 +15,7 @@ Biblib ne collecte aucune donnée personnelle. Il n'existe ni compte Biblib, ni 
 
 ## Ce que l'extension lit
 
-Sur les sites listés dans l'extension (livres, disques, films et jeux de société : par exemple Amazon, Babelio, Fnac, Allociné, IMDb, Philibert), Biblib lit dans la page l'ISBN, le titre et l'auteur du livre affiché (pour un CD ou un DVD : l'EAN, c'est-à-dire le code-barres, le titre, l'artiste ou le réalisateur ; pour un jeu : l'EAN, le titre et l'auteur du jeu). Rien d'autre n'est lu, et rien n'est lu sur les autres sites.
+Sur les sites listés dans l'extension (livres, disques, films, jeux de société et jeux vidéo : par exemple Amazon, Babelio, Fnac, Allociné, IMDb, Philibert, SensCritique), Biblib lit dans la page l'ISBN, le titre et l'auteur du livre affiché (pour un CD ou un DVD : l'EAN, c'est-à-dire le code-barres, le titre, l'artiste ou le réalisateur ; pour un jeu : l'EAN, le titre et l'auteur du jeu). Rien d'autre n'est lu, et rien n'est lu sur les autres sites.
 
 ## Ce que l'extension envoie, et à qui
 
